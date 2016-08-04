@@ -1,0 +1,2 @@
+# MyNews
+Sample application
