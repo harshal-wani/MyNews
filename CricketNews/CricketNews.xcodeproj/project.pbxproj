@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F88713451D53B8C400B9F88C /* NewsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F88713441D53B8C400B9F88C /* NewsViewCell.m */; };
 		F88B0B831D51278F00066023 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F88B0B6F1D51278F00066023 /* AppDelegate.m */; };
 		F88B0BB41D51316D00066023 /* AbstractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F88B0BB31D51316D00066023 /* AbstractViewController.m */; };
 		F88B0BB71D51325000066023 /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F88B0BB61D51325000066023 /* NewsListViewController.m */; };
+		F8948AD01D58EA50003F48A1 /* CustomNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8948ACF1D58EA50003F48A1 /* CustomNavController.m */; };
+		F8948AD71D58ED4F003F48A1 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8948AD61D58ED4F003F48A1 /* RootViewController.m */; };
+		F8948AFD1D590958003F48A1 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8948AFC1D590958003F48A1 /* NewsDetailViewController.m */; };
+		F8948AFF1D590A67003F48A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8948AFE1D590A67003F48A1 /* Localizable.strings */; };
+		F8948B021D591181003F48A1 /* NewsDetailsProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8948B011D591181003F48A1 /* NewsDetailsProxy.m */; };
 		F8A193A21D53907900CFF0FB /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A193A11D53907900CFF0FB /* NewsModel.m */; };
 		F8A193A51D53914300CFF0FB /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A193A41D53914300CFF0FB /* UIUtils.m */; };
 		F8A193A91D53916100CFF0FB /* CommonMethodHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A193A81D53916100CFF0FB /* CommonMethodHelper.m */; };
@@ -30,6 +36,8 @@
 		4490762A4F9EA5E51D1F0F9A /* Pods-CricketNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CricketNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CricketNews/Pods-CricketNews.debug.xcconfig"; sourceTree = "<group>"; };
 		91715CB0392AC5E12CC4E0C0 /* libPods-CricketNews.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CricketNews.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF03576DF12FA2315FA79861 /* Pods-CricketNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CricketNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-CricketNews/Pods-CricketNews.release.xcconfig"; sourceTree = "<group>"; };
+		F88713431D53B8C400B9F88C /* NewsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewCell.h; sourceTree = "<group>"; };
+		F88713441D53B8C400B9F88C /* NewsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewCell.m; sourceTree = "<group>"; };
 		F88B0B511D5125B500066023 /* CricketNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CricketNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88B0B6E1D51278F00066023 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F88B0B6F1D51278F00066023 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +47,15 @@
 		F88B0BB31D51316D00066023 /* AbstractViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractViewController.m; sourceTree = "<group>"; };
 		F88B0BB51D51325000066023 /* NewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListViewController.h; sourceTree = "<group>"; };
 		F88B0BB61D51325000066023 /* NewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewController.m; sourceTree = "<group>"; };
+		F8948ACE1D58EA50003F48A1 /* CustomNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavController.h; sourceTree = "<group>"; };
+		F8948ACF1D58EA50003F48A1 /* CustomNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavController.m; sourceTree = "<group>"; };
+		F8948AD51D58ED4F003F48A1 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		F8948AD61D58ED4F003F48A1 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		F8948AFB1D590958003F48A1 /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
+		F8948AFC1D590958003F48A1 /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
+		F8948AFE1D590A67003F48A1 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F8948B001D591181003F48A1 /* NewsDetailsProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailsProxy.h; sourceTree = "<group>"; };
+		F8948B011D591181003F48A1 /* NewsDetailsProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailsProxy.m; sourceTree = "<group>"; };
 		F8A193A01D53907900CFF0FB /* NewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
 		F8A193A11D53907900CFF0FB /* NewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
 		F8A193A31D53914300CFF0FB /* UIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
@@ -94,6 +111,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F88713421D53B8B700B9F88C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F88713431D53B8C400B9F88C /* NewsViewCell.h */,
+				F88713441D53B8C400B9F88C /* NewsViewCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		F88B0B481D5125B500066023 = {
 			isa = PBXGroup;
 			children = (
@@ -115,9 +141,9 @@
 		F88B0B531D5125B500066023 /* CricketNews */ = {
 			isa = PBXGroup;
 			children = (
-				F8A193C41D539D6300CFF0FB /* SupportingFiles */,
 				F88B0B6B1D51278F00066023 /* Application */,
 				F88B0B7B1D51278F00066023 /* Common */,
+				F8A193C41D539D6300CFF0FB /* SupportingFiles */,
 				F88B0B821D51278F00066023 /* ThirdParty */,
 			);
 			path = CricketNews;
@@ -175,23 +201,16 @@
 		F88B0B731D51278F00066023 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				F88B0B741D51278F00066023 /* Cells */,
+				F88713421D53B8B700B9F88C /* Cells */,
 				F88B0B751D51278F00066023 /* ViewContollers */,
-				F88B0B7A1D51278F00066023 /* Views */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		F88B0B741D51278F00066023 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		F88B0B751D51278F00066023 /* ViewContollers */ = {
 			isa = PBXGroup;
 			children = (
+				F8948AD41D58ED4F003F48A1 /* RootViewController */,
 				F88B0B761D51278F00066023 /* AbstractViewController */,
 				F88B0B771D51278F00066023 /* NewsViewController */,
 			);
@@ -212,20 +231,16 @@
 			children = (
 				F88B0BB51D51325000066023 /* NewsListViewController.h */,
 				F88B0BB61D51325000066023 /* NewsListViewController.m */,
+				F8948AFB1D590958003F48A1 /* NewsDetailViewController.h */,
+				F8948AFC1D590958003F48A1 /* NewsDetailViewController.m */,
 			);
 			path = NewsViewController;
-			sourceTree = "<group>";
-		};
-		F88B0B7A1D51278F00066023 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		F88B0B7B1D51278F00066023 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F8948ACD1D58EA11003F48A1 /* CustomNavigation */,
 				F8A193A61D53914C00CFF0FB /* CommonMethodHelper */,
 				F88B0B7D1D51278F00066023 /* Utils */,
 			);
@@ -252,6 +267,24 @@
 				F8A193B41D5392CD00CFF0FB /* PintCollectionViewLayout */,
 			);
 			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		F8948ACD1D58EA11003F48A1 /* CustomNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				F8948ACE1D58EA50003F48A1 /* CustomNavController.h */,
+				F8948ACF1D58EA50003F48A1 /* CustomNavController.m */,
+			);
+			path = CustomNavigation;
+			sourceTree = "<group>";
+		};
+		F8948AD41D58ED4F003F48A1 /* RootViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F8948AD51D58ED4F003F48A1 /* RootViewController.h */,
+				F8948AD61D58ED4F003F48A1 /* RootViewController.m */,
+			);
+			path = RootViewController;
 			sourceTree = "<group>";
 		};
 		F8A193A61D53914C00CFF0FB /* CommonMethodHelper */ = {
@@ -297,6 +330,8 @@
 			children = (
 				F8A193C11D539A4300CFF0FB /* NewsProxy.h */,
 				F8A193C21D539A4300CFF0FB /* NewsProxy.m */,
+				F8948B001D591181003F48A1 /* NewsDetailsProxy.h */,
+				F8948B011D591181003F48A1 /* NewsDetailsProxy.m */,
 			);
 			path = NewsProxy;
 			sourceTree = "<group>";
@@ -307,6 +342,7 @@
 				F8A193C51D539D6300CFF0FB /* Assets.xcassets */,
 				F8A193C61D539D6300CFF0FB /* Info.plist */,
 				F8A193C71D539D6300CFF0FB /* main.m */,
+				F8948AFE1D590A67003F48A1 /* Localizable.strings */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -372,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8A193C91D539D6300CFF0FB /* Info.plist in Resources */,
+				F8948AFF1D590A67003F48A1 /* Localizable.strings in Resources */,
 				F8A193C81D539D6300CFF0FB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,15 +472,20 @@
 				F8A193C01D539A3300CFF0FB /* AbstractProxy.m in Sources */,
 				F8A193B01D53926A00CFF0FB /* StringUtils.m in Sources */,
 				F88B0B831D51278F00066023 /* AppDelegate.m in Sources */,
+				F8948AD01D58EA50003F48A1 /* CustomNavController.m in Sources */,
 				F8A193AC1D5391C300CFF0FB /* NetworkUtils.m in Sources */,
 				F8A193C31D539A4300CFF0FB /* NewsProxy.m in Sources */,
 				F8A193BB1D5392CD00CFF0FB /* PNCollectionCellBackgroundView.m in Sources */,
+				F8948B021D591181003F48A1 /* NewsDetailsProxy.m in Sources */,
 				F8A193A91D53916100CFF0FB /* CommonMethodHelper.m in Sources */,
+				F88713451D53B8C400B9F88C /* NewsViewCell.m in Sources */,
 				F8A193BA1D5392CD00CFF0FB /* PintCollectionViewLayout.m in Sources */,
 				F8A193A51D53914300CFF0FB /* UIUtils.m in Sources */,
+				F8948AD71D58ED4F003F48A1 /* RootViewController.m in Sources */,
 				F8A193B91D5392CD00CFF0FB /* MBProgressHUD.m in Sources */,
 				F8A193A21D53907900CFF0FB /* NewsModel.m in Sources */,
 				F8A193CA1D539D6300CFF0FB /* main.m in Sources */,
+				F8948AFD1D590958003F48A1 /* NewsDetailViewController.m in Sources */,
 				F88B0BB71D51325000066023 /* NewsListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

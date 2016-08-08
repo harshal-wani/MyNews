@@ -12,4 +12,17 @@
 
 @property (nonatomic, assign) BOOL didSetupConstraints;
 
+@property(nonatomic,retain) UIImageView *navigationBar;
+
+@property(nonatomic,retain) UILabel *navigationBarTitle;
+
+@property(nonatomic,strong) UIButton *navigationBarLeftButton;
+
+@property(nonatomic,strong) UIButton *navigationBarRightButton;
+
+- (void)addNavigationBar;
+- (void)addNavBarTitle:(NSString *)navTitle;
+- (void)addNavBarLeftButtonWithImage:(NSString*)imageName;
+- (void)addNavBarRightButtonWithImage:(NSString*)imageName;
+
 @end

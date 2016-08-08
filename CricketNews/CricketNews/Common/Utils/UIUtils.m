@@ -7,9 +7,22 @@
 //
 
 #import "UIUtils.h"
+#import "CommonImports.h"
 
 @implementation UIUtils
 
+#pragma mark - Calculate points according to device size
+
++ (float)pointsToPixels:(float)points
+{
+    if (IS_IPAD)
+        return points;
+    
+    float baseWidth = 320;
+    float screenWidth = SCREEN_MIN_LENGTH;
+    
+    return (points * screenWidth) / baseWidth;
+}
 
 #pragma mark - Color Methods
 
@@ -55,6 +68,70 @@
     [alertController addAction:ok];
     
     [[[UIApplication sharedApplication] keyWindow].rootViewController presentViewController:alertController animated:YES completion:nil];
+}
+#pragma mark -  ImageView
+
++ (UIImageView *)createImageView:(NSString *)imageName
+{
+    UIImageView *imageView = [[UIImageView alloc] initForAutoLayout];
+    
+    if ([StringUtils isStringPresent:imageName])
+    {
+        [imageView setImage:[UIImage imageNamed:imageName]];
+    }
+    
+    return imageView;
+}
+#pragma mark -  Label
+
++ (UILabel *)createLabelWithText:(NSString *)text
+                withTextColorHex:(NSString *)HexValue
+               withTextAlignment:(NSTextAlignment)alignment
+                        withFont:(NSString *)fontName
+                     andFontSize:(float)fontSize
+{
+    UILabel *label = [[UILabel alloc] initForAutoLayout];
+    
+    [label setBackgroundColor:[UIColor clearColor]];
+    [label setText:text];
+    
+    if ([StringUtils isStringPresent:fontName])
+    {
+        [label setFont:[UIFont fontWithName:fontName
+                                       size:fontSize]];
+    }
+    else
+    {
+        [label setFont:[UIFont systemFontOfSize:fontSize]];
+    }
+    
+    [label setTextColor:[UIUtils colorFromHexColor:HexValue]];
+    
+    [label setTextAlignment:alignment];
+    
+    return label;
+}
+#pragma mark -  Button -
+
++ (UIButton*)createButtonWithImage:(NSString*)imageName
+                    andEventTarget:(id)targetedObject
+                         andAction:(SEL)action
+                            andTag:(int)tagNo
+{
+    
+    UIButton *button = [[UIButton alloc] initForAutoLayout];
+    
+    if ([StringUtils isStringPresent:imageName]) {
+        
+        [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+        
+    }
+    
+    [button addTarget:targetedObject action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    [button setTag:tagNo];
+    
+    return button;
 }
 
 @end

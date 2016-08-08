@@ -7,17 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RootViewController.h"
+#import "CustomNavController.h"
 
-@class NewsListViewController;
+@class RootViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (nonatomic, strong) NewsListViewController *rootViewController;
-
-@property (strong, nonatomic) UINavigationController *rootNavigationController;
-
+@property (strong, nonatomic) RootViewController *rootViewController;
 
 @end
 

@@ -18,4 +18,22 @@
 + (void)alertView:(NSString *)message
         withTitle:(NSString *)title;
 
+//Calculate points according to device size
++ (float)pointsToPixels:(float)points;
+
+//Create ImageView
++ (UIImageView *)createImageView:(NSString *)imageName;
+
+//Create UILabel
++ (UILabel *)createLabelWithText:(NSString *)text
+                withTextColorHex:(NSString *)HexValue
+               withTextAlignment:(NSTextAlignment)alignment
+                        withFont:(NSString *)fontName
+                     andFontSize:(float)fontSize;
+
+//Create Button with Image
++ (UIButton*)createButtonWithImage:(NSString*)imageName
+                    andEventTarget:(id)targetedObject
+                         andAction:(SEL)action
+                            andTag:(int)tagNo;
 @end

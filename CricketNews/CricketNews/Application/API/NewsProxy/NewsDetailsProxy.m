@@ -1,27 +1,30 @@
 //
-//  NewsProxy.m
+//  NewsDetailsProxy.m
 //  CricketNews
 //
-//  Created by Harshal Wani on 8/4/16.
+//  Created by Harshal Wani on 8/9/16.
 //  Copyright © 2016 Harshal Wani. All rights reserved.
 //
 
-#import "NewsProxy.h"
-#import "NewsModel.h"
+#import "NewsDetailsProxy.h"
 
-@implementation NewsProxy
+@implementation NewsDetailsProxy
 
-static NSString *const kNEWS_LIST_API_URL = @"interview/newslist";
+static NSString *const kNEWS_DETAILS_API_URL = @"interview/newsdetail";
 
-static NSString *const kNEWS_LIST_API_NAME = @"NewsList";
+static NSString *const kNEWS_DETAILS_API_NAME = @"NewsDetails";
 
-- (void)getNewsListWithSuccess:(NewsProxySuccessBlock)success withFailure:(NewsProxyFailureBlock)failure{
-    
+//h ttp://m.cricbuzz.com/interview/newsdetail/
+
+-(void)getNewsDetails:(int)newdID
+          WithSuccess:(NewsDetailsProxySuccessBlock)success
+          withFailure:(NewsDetailsProxyFailureBlock)failure{
+
     self.successBlock = success;
     self.failureBlock = failure;
 
-    [super getRequestDataWithURL:kNEWS_LIST_API_URL
-                  andRequestName:kNEWS_LIST_API_NAME];
+    [super getRequestDataWithURL:[NSString stringWithFormat:@"%@/%d",kNEWS_DETAILS_API_URL,newdID]
+                  andRequestName:kNEWS_DETAILS_API_NAME];
 }
 
 #pragma mark - Server request callback methods -
@@ -69,37 +72,7 @@ static NSString *const kNEWS_LIST_API_NAME = @"NewsList";
 {
     NSDictionary *responseDict = [self JSONValueReturnsDictionary:responseString];
     
-    if ([responseDict isKindOfClass:[NSDictionary class]])
-    {
-        NSMutableArray *newsModelArray = [[NSMutableArray alloc] init];
-        
-        for (NSInteger iterator = 0; iterator < [responseDict[@"news"] count]; iterator++)
-        {
-            NSDictionary *objectDictionary = responseDict[@"news"][iterator];
-            
-            if ([objectDictionary isKindOfClass:[NSDictionary class]])
-            {
-                
-                NewsModel *newsModel = [NewsModel createNewsModelFromDictionary:objectDictionary];
-                
-                [newsModelArray addObject:newsModel];
-            }
-        }
-        
-        NSDictionary *modelDict = @{
-                                    @"news": newsModelArray,
-                                    @"detailed_URL":responseDict[@"detailed_URL"]
-                                    };
-        
-        self.successBlock(modelDict);
-    }
-    else
-    {
-        NSDictionary *returnDictionary = @{
-                                           @"message":COMMUNICATION_WITH_SERVER_FAILED
-                                           };
-        self.failureBlock(returnDictionary);
-    }
+    self.successBlock(responseDict);
     
 }
 

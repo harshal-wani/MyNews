@@ -8,8 +8,6 @@
 
 #import "AppDelegate.h"
 #import "CommonImports.h"
-#import "NewsListViewController.h"
-
 
 @interface AppDelegate ()
 
@@ -53,21 +51,13 @@
 
 - (void)setUpInitialViewController
 {
-    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.rootViewController = [[NewsListViewController alloc]init];
-    self.rootNavigationController = [[UINavigationController alloc]initWithRootViewController:self.rootViewController];
-    [self.rootNavigationController.navigationBar setBarTintColor:[UIUtils colorFromHexColor:GREEN_HEADER_HEX_1BB38B]];
-
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.rootViewController = [[RootViewController alloc] init];
     
-    [self.window
-     setRootViewController:self.rootNavigationController];
-    self.rootViewController.view.translatesAutoresizingMaskIntoConstraints = YES;
-    
-    [self.window
-     setBackgroundColor:[UIUtils colorFromHexColor:GRAY_HEX_656565]];
-    
+    [self.window setRootViewController:self.rootViewController];
     [self.window makeKeyAndVisible];
+
 }
 
 

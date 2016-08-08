@@ -5,6 +5,7 @@
 //  Created by Harshal Wani on 8/4/16.
 //  Copyright © 2016 Harshal Wani. All rights reserved.
 //
+#import "AppDelegate.h"
 
 #ifndef Macros_h
 #define Macros_h
@@ -15,6 +16,14 @@
 
 // PTPX
 #define PTPX(pt)         ([UIUtils pointsToPixels:pt])
+
+//Get Device
+#define IS_IPAD             (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE           (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA           ([[UIScreen mainScreen] scale] >= 2.0)
+
+//Easily access the Projects AppDelegate object from anywhere
+#define APP_DELEGATE                   ((AppDelegate *) [[UIApplication sharedApplication] delegate])
 
 //Used to print debugging output
 #define PRINT_LOGS
