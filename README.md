@@ -1,5 +1,5 @@
 # MyNews
-Small application to read latest news.
+Small application to get latest Cricket News.
 
 
 #Libraries Used
