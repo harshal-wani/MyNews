@@ -18,9 +18,11 @@
 #define GREEN_HEADER_HEX_1BB38B             @"1BB38B"
 #define GRAY_HEX_656565                     @"656565"
 #define LIGHT_GRAY_HEX_656565               @"AAAAAA"
+#define VIEW_BG_COLOR                       @"E7ECED"
 
 //Fonts
 #define HELVETICA_NEUE                  @"HelveticaNeue"
+#define HELVETICA_NEUE_BOLD             @"HelveticaNeue-Bold"
 
 //Network
 #define COMMUNICATION_WITH_SERVER_FAILED    @"Communication with server failed"

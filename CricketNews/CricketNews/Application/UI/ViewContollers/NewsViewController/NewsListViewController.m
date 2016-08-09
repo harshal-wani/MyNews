@@ -91,11 +91,7 @@
     {
         UICollectionViewFlowLayout *layout;
         
-        layout=[[UICollectionViewFlowLayout alloc] init];
-//        [layout setItemSize:CGSizeMake(PTPX(320), PTPX(100))];
-        layout.minimumInteritemSpacing = 5;
-//        layout.minimumLineSpacing = 1;
-        
+        layout=[[UICollectionViewFlowLayout alloc] init];        
         layout.headerReferenceSize = CGSizeZero;
         layout.footerReferenceSize = CGSizeZero;
         
@@ -110,7 +106,7 @@
         
         _newCollectionView.alwaysBounceVertical = NO;
         _newCollectionView.clipsToBounds = YES;
-        _newCollectionView.backgroundColor = [UIUtils colorFromHexColor:LIGHT_GRAY_HEX_656565];
+        _newCollectionView.backgroundColor = [UIColor clearColor];
     }
     
     return _newCollectionView;
@@ -144,41 +140,41 @@
  #pragma mark - Public Methods
  #pragma mark – Delegate Methods
 
-#pragma mark - UICollectionViewDelegateJSPintLayout
+#pragma mark - UICollectionViewDelegateFlowLayout -
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 10;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    
+    if (IS_IPHONE)
+        return 1.5;
+    else
+        return 10;
+}
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    if (IS_IPHONE)
+        return UIEdgeInsetsMake(0, 0, 0, 0);
+    else
+        return UIEdgeInsetsMake(20, 10, 20, 10);
+    
+}
+
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     if (IS_IPHONE)
-        return CGSizeMake(PTPX(320), PTPX(150));
+        return CGSizeMake(PTPX(320), PTPX(90));
     else
-        return CGSizeMake(320, 100);
+        return CGSizeMake(325, 90);
 }
-//- (CGFloat)columnWidthForCollectionView:(UICollectionView*)collectionView
-//                                 layout:(UICollectionViewLayout*)collectionViewLayout {
-//    return 320;
-//}
-//
-//- (NSUInteger)maximumNumberOfColumnsForCollectionView:(UICollectionView *)collectionView
-//                                               layout:(UICollectionViewLayout *)collectionViewLayout {
-//    
-//    return 3;
-//}
-//
-//- (CGFloat)collectionView:(UICollectionView*)collectionView
-//                   layout:(UICollectionViewLayout*)collectionViewLayout
-// heightForItemAtIndexPath:(NSIndexPath*)indexPath {
-//    
-//    
-//    if ([self.newsArray count] > 0) {
-//        return PTPX(200);
-//    }
-//    else{
-//        return 0;
-//    }
-//}
+
+#pragma mark - UICollectionViewDelegate Methods
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView
      numberOfItemsInSection:(NSInteger)section
 {
-    return self.newsArray.count-90;
+    return self.newsArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
@@ -205,8 +201,7 @@
                             objectAtIndex:indexPath.row];
 
     NewsDetailViewController *newsDetailViewController = [[NewsDetailViewController alloc] init];
-    
-    newsDetailViewController.newsID = [newsModel.newsID integerValue];
+    newsDetailViewController.newsID = [newsModel.newsID intValue];
     
     [APP_DELEGATE.rootViewController.navController pushViewController:newsDetailViewController animated:YES];
     

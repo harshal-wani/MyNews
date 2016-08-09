@@ -20,7 +20,7 @@ typedef void (^NewsDetailsProxyFailureBlock)(NSDictionary *responseDict);
 @property(nonatomic, copy) NewsDetailsProxyFailureBlock failureBlock;
 
 
--(void)getNewsDetails:(int)newdID
+-(void)getNewsDetails:(int)newsID
           WithSuccess:(NewsDetailsProxySuccessBlock)success
           withFailure:(NewsDetailsProxyFailureBlock)failure;
 

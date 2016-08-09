@@ -17,9 +17,9 @@
     {
         return;
     }
-    
-    [MBProgressHUD showHUDAddedTo:view
-                         animated:YES];
+    MBProgressHUD *HUB = [MBProgressHUD showHUDAddedTo:view
+                                              animated:YES];
+    HUB.color = [UIUtils colorFromHexColor:GREEN_HEADER_HEX_1BB38B];
 }
 
 + (void)hideHudForView:(UIView *)view

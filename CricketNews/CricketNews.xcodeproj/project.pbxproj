@@ -16,14 +16,16 @@
 		F8948AFD1D590958003F48A1 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8948AFC1D590958003F48A1 /* NewsDetailViewController.m */; };
 		F8948AFF1D590A67003F48A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F8948AFE1D590A67003F48A1 /* Localizable.strings */; };
 		F8948B021D591181003F48A1 /* NewsDetailsProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8948B011D591181003F48A1 /* NewsDetailsProxy.m */; };
+		F8950BE21D5A487F00BF2911 /* NewsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8950BE11D5A487F00BF2911 /* NewsDetailModel.m */; };
+		F8950BE51D5A48D800BF2911 /* NewsImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8950BE41D5A48D800BF2911 /* NewsImageModel.m */; };
+		F8950BE81D5A4F2700BF2911 /* NSDate+newsDates.m in Sources */ = {isa = PBXBuildFile; fileRef = F8950BE71D5A4F2700BF2911 /* NSDate+newsDates.m */; };
+		F8950BEB1D5A554000BF2911 /* NewsImageWithCaptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F8950BEA1D5A554000BF2911 /* NewsImageWithCaptionCell.m */; };
 		F8A193A21D53907900CFF0FB /* NewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A193A11D53907900CFF0FB /* NewsModel.m */; };
 		F8A193A51D53914300CFF0FB /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A193A41D53914300CFF0FB /* UIUtils.m */; };
 		F8A193A91D53916100CFF0FB /* CommonMethodHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A193A81D53916100CFF0FB /* CommonMethodHelper.m */; };
 		F8A193AC1D5391C300CFF0FB /* NetworkUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A193AB1D5391C300CFF0FB /* NetworkUtils.m */; };
 		F8A193B01D53926A00CFF0FB /* StringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A193AF1D53926A00CFF0FB /* StringUtils.m */; };
 		F8A193B91D5392CD00CFF0FB /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A193B31D5392CD00CFF0FB /* MBProgressHUD.m */; };
-		F8A193BA1D5392CD00CFF0FB /* PintCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A193B61D5392CD00CFF0FB /* PintCollectionViewLayout.m */; };
-		F8A193BB1D5392CD00CFF0FB /* PNCollectionCellBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A193B81D5392CD00CFF0FB /* PNCollectionCellBackgroundView.m */; };
 		F8A193C01D539A3300CFF0FB /* AbstractProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A193BF1D539A3300CFF0FB /* AbstractProxy.m */; };
 		F8A193C31D539A4300CFF0FB /* NewsProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A193C21D539A4300CFF0FB /* NewsProxy.m */; };
 		F8A193C81D539D6300CFF0FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8A193C51D539D6300CFF0FB /* Assets.xcassets */; };
@@ -56,6 +58,14 @@
 		F8948AFE1D590A67003F48A1 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		F8948B001D591181003F48A1 /* NewsDetailsProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailsProxy.h; sourceTree = "<group>"; };
 		F8948B011D591181003F48A1 /* NewsDetailsProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailsProxy.m; sourceTree = "<group>"; };
+		F8950BE01D5A487F00BF2911 /* NewsDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailModel.h; sourceTree = "<group>"; };
+		F8950BE11D5A487F00BF2911 /* NewsDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailModel.m; sourceTree = "<group>"; };
+		F8950BE31D5A48D800BF2911 /* NewsImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsImageModel.h; sourceTree = "<group>"; };
+		F8950BE41D5A48D800BF2911 /* NewsImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsImageModel.m; sourceTree = "<group>"; };
+		F8950BE61D5A4F2700BF2911 /* NSDate+newsDates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+newsDates.h"; sourceTree = "<group>"; };
+		F8950BE71D5A4F2700BF2911 /* NSDate+newsDates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+newsDates.m"; sourceTree = "<group>"; };
+		F8950BE91D5A554000BF2911 /* NewsImageWithCaptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsImageWithCaptionCell.h; sourceTree = "<group>"; };
+		F8950BEA1D5A554000BF2911 /* NewsImageWithCaptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsImageWithCaptionCell.m; sourceTree = "<group>"; };
 		F8A193A01D53907900CFF0FB /* NewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsModel.h; sourceTree = "<group>"; };
 		F8A193A11D53907900CFF0FB /* NewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsModel.m; sourceTree = "<group>"; };
 		F8A193A31D53914300CFF0FB /* UIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
@@ -69,10 +79,6 @@
 		F8A193AF1D53926A00CFF0FB /* StringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringUtils.m; sourceTree = "<group>"; };
 		F8A193B21D5392CD00CFF0FB /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		F8A193B31D5392CD00CFF0FB /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		F8A193B51D5392CD00CFF0FB /* PintCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PintCollectionViewLayout.h; sourceTree = "<group>"; };
-		F8A193B61D5392CD00CFF0FB /* PintCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PintCollectionViewLayout.m; sourceTree = "<group>"; };
-		F8A193B71D5392CD00CFF0FB /* PNCollectionCellBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNCollectionCellBackgroundView.h; sourceTree = "<group>"; };
-		F8A193B81D5392CD00CFF0FB /* PNCollectionCellBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PNCollectionCellBackgroundView.m; sourceTree = "<group>"; };
 		F8A193BE1D539A3300CFF0FB /* AbstractProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractProxy.h; sourceTree = "<group>"; };
 		F8A193BF1D539A3300CFF0FB /* AbstractProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractProxy.m; sourceTree = "<group>"; };
 		F8A193C11D539A4300CFF0FB /* NewsProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsProxy.h; sourceTree = "<group>"; };
@@ -114,6 +120,8 @@
 		F88713421D53B8B700B9F88C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F8950BE91D5A554000BF2911 /* NewsImageWithCaptionCell.h */,
+				F8950BEA1D5A554000BF2911 /* NewsImageWithCaptionCell.m */,
 				F88713431D53B8C400B9F88C /* NewsViewCell.h */,
 				F88713441D53B8C400B9F88C /* NewsViewCell.m */,
 			);
@@ -194,6 +202,10 @@
 			children = (
 				F8A193A01D53907900CFF0FB /* NewsModel.h */,
 				F8A193A11D53907900CFF0FB /* NewsModel.m */,
+				F8950BE01D5A487F00BF2911 /* NewsDetailModel.h */,
+				F8950BE11D5A487F00BF2911 /* NewsDetailModel.m */,
+				F8950BE31D5A48D800BF2911 /* NewsImageModel.h */,
+				F8950BE41D5A48D800BF2911 /* NewsImageModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,6 +268,8 @@
 				F8A193AB1D5391C300CFF0FB /* NetworkUtils.m */,
 				F8A193AE1D53926A00CFF0FB /* StringUtils.h */,
 				F8A193AF1D53926A00CFF0FB /* StringUtils.m */,
+				F8950BE61D5A4F2700BF2911 /* NSDate+newsDates.h */,
+				F8950BE71D5A4F2700BF2911 /* NSDate+newsDates.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -264,7 +278,6 @@
 			isa = PBXGroup;
 			children = (
 				F8A193B11D5392CD00CFF0FB /* MBProgressHUD */,
-				F8A193B41D5392CD00CFF0FB /* PintCollectionViewLayout */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -303,17 +316,6 @@
 				F8A193B31D5392CD00CFF0FB /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
-			sourceTree = "<group>";
-		};
-		F8A193B41D5392CD00CFF0FB /* PintCollectionViewLayout */ = {
-			isa = PBXGroup;
-			children = (
-				F8A193B51D5392CD00CFF0FB /* PintCollectionViewLayout.h */,
-				F8A193B61D5392CD00CFF0FB /* PintCollectionViewLayout.m */,
-				F8A193B71D5392CD00CFF0FB /* PNCollectionCellBackgroundView.h */,
-				F8A193B81D5392CD00CFF0FB /* PNCollectionCellBackgroundView.m */,
-			);
-			path = PintCollectionViewLayout;
 			sourceTree = "<group>";
 		};
 		F8A193BC1D539A1200CFF0FB /* AbstractProxy */ = {
@@ -472,15 +474,17 @@
 				F8A193C01D539A3300CFF0FB /* AbstractProxy.m in Sources */,
 				F8A193B01D53926A00CFF0FB /* StringUtils.m in Sources */,
 				F88B0B831D51278F00066023 /* AppDelegate.m in Sources */,
+				F8950BE51D5A48D800BF2911 /* NewsImageModel.m in Sources */,
 				F8948AD01D58EA50003F48A1 /* CustomNavController.m in Sources */,
 				F8A193AC1D5391C300CFF0FB /* NetworkUtils.m in Sources */,
+				F8950BEB1D5A554000BF2911 /* NewsImageWithCaptionCell.m in Sources */,
 				F8A193C31D539A4300CFF0FB /* NewsProxy.m in Sources */,
-				F8A193BB1D5392CD00CFF0FB /* PNCollectionCellBackgroundView.m in Sources */,
+				F8950BE21D5A487F00BF2911 /* NewsDetailModel.m in Sources */,
 				F8948B021D591181003F48A1 /* NewsDetailsProxy.m in Sources */,
 				F8A193A91D53916100CFF0FB /* CommonMethodHelper.m in Sources */,
 				F88713451D53B8C400B9F88C /* NewsViewCell.m in Sources */,
-				F8A193BA1D5392CD00CFF0FB /* PintCollectionViewLayout.m in Sources */,
 				F8A193A51D53914300CFF0FB /* UIUtils.m in Sources */,
+				F8950BE81D5A4F2700BF2911 /* NSDate+newsDates.m in Sources */,
 				F8948AD71D58ED4F003F48A1 /* RootViewController.m in Sources */,
 				F8A193B91D5392CD00CFF0FB /* MBProgressHUD.m in Sources */,
 				F8A193A21D53907900CFF0FB /* NewsModel.m in Sources */,

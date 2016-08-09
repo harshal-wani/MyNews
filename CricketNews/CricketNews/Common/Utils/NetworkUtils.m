@@ -23,7 +23,6 @@
     else
     {
         return YES;
-        DebugLog(@"There IS internet connection");
     }
 }
 
@@ -40,7 +39,6 @@
     else
     {
         return YES;
-        DebugLog(@"There is internet connection");
     }
 }
 

@@ -23,16 +23,8 @@
          addSubview:self.lblNewsTitle];
         [self.contentView
          addSubview:self.lblPostDate];
-        [self.contentView
-         addSubview:self.lblNewsDescription];
         
         [self setBackgroundColor:[UIColor whiteColor]];
-        
-        //        self.layer.cornerRadius = PTPX(3);
-        //        self.layer.borderColor = [UIUtils colorFromHexColor:BLACK_LIGHT_HEX_C0C0C0].CGColor;
-        //        self.layer.borderWidth = 1;
-        
-        self.clipsToBounds = YES;
         
         [self setNeedsUpdateConstraints];
     }
@@ -58,7 +50,7 @@
         [self.newsThumbnailImage
          autoSetDimension:ALDimensionHeight
          toSize:PTPX(60)];
-        
+
         
         [self.lblNewsTitle
          autoPinEdgeToSuperviewEdge:ALEdgeTop
@@ -94,31 +86,6 @@
          autoPinEdgeToSuperviewEdge:ALEdgeRight
          withInset:PTPX(10)];
 
-
-        
-        [self.lblNewsDescription
-         autoPinEdge:ALEdgeTop
-         toEdge:ALEdgeBottom
-         ofView:self.newsThumbnailImage
-         withOffset:PTPX(5)];
-        [self.lblNewsDescription
-         autoPinEdgeToSuperviewEdge:ALEdgeLeft
-         withInset:PTPX(10)];
-        [self.lblNewsDescription
-         autoPinEdgeToSuperviewEdge:ALEdgeRight
-         withInset:PTPX(10)];
-        [self.lblNewsDescription
-         setContentCompressionResistancePriority:UILayoutPriorityDefaultHigh
-         forAxis:UILayoutConstraintAxisVertical];
-        [self.lblNewsDescription
-         setContentHuggingPriority:UILayoutPriorityDefaultHigh
-         forAxis:UILayoutConstraintAxisVertical];
-
-
-        [self.lblNewsDescription
-         autoPinEdgeToSuperviewEdge:ALEdgeBottom
-         withInset:PTPX(10)];
-        
         self.didSetupConstraints = YES;
     }
 }
@@ -142,10 +109,10 @@
         _lblNewsTitle = [UIUtils createLabelWithText:@""
                                     withTextColorHex:GRAY_HEX_656565
                                    withTextAlignment:NSTextAlignmentLeft
-                                            withFont:HELVETICA_NEUE
-                                         andFontSize:PTPX(12)];
-        [_lblNewsTitle setLineBreakMode:NSLineBreakByWordWrapping];
-        _lblNewsTitle.numberOfLines = 0;
+                                            withFont:HELVETICA_NEUE_BOLD
+                                         andFontSize:PTPX(13)];
+//        [_lblNewsTitle setLineBreakMode:NSLineBreakByWordWrapping];
+        _lblNewsTitle.numberOfLines = 2;
     }
     return _lblNewsTitle;
 }
@@ -162,27 +129,14 @@
     }
     return _lblPostDate;
 }
-- (UILabel *)lblNewsDescription
-{
-    if (!_lblNewsDescription)
-    {
-        _lblNewsDescription = [UIUtils createLabelWithText:@"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
-                                   withTextColorHex:GRAY_HEX_656565
-                                  withTextAlignment:NSTextAlignmentLeft
-                                           withFont:HELVETICA_NEUE
-                                        andFontSize:PTPX(12)];
-        [_lblNewsDescription setLineBreakMode:NSLineBreakByWordWrapping];
-        _lblNewsDescription.numberOfLines = 0;
-    }
-    return _lblNewsDescription;
-}
+
 
 #pragma mark – Private Methods
 
 - (void)setUpUIwithModel:(NewsModel *)model
 {
     self.lblNewsTitle.text = model.headline;
-    self.lblPostDate.text = [NewsViewCell formatDate:model.timestamp];
+    self.lblPostDate.text = [NSDate formatDate:model.timestamp withFormat:@"MMM dd, yyyy"];
     
     if ([StringUtils isStringPresent:model.image]) {
         
@@ -206,19 +160,4 @@
     self.lblPostDate.text = @"";
     [self.newsThumbnailImage setImage:[UIImage imageNamed:@"news_placeholder"]];
 }
-
-+(NSString *) formatDate:(NSString *)fromDate {
-    
-    NSTimeInterval seconds = [fromDate doubleValue];
-    
-    NSDate *expDate = [[NSDate alloc] initWithTimeIntervalSince1970:seconds];
-    
-    
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MMM dd, yyyy hh:mm a"];
-    
-    return [NSString stringWithFormat:@"%@",[dateFormatter stringFromDate:expDate]];
-    
-}
-
 @end

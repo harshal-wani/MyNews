@@ -7,6 +7,8 @@
 //
 
 #import "NewsDetailsProxy.h"
+#import "NewsDetailModel.h"
+#import "NewsImageModel.h"
 
 @implementation NewsDetailsProxy
 
@@ -14,16 +16,14 @@ static NSString *const kNEWS_DETAILS_API_URL = @"interview/newsdetail";
 
 static NSString *const kNEWS_DETAILS_API_NAME = @"NewsDetails";
 
-//h ttp://m.cricbuzz.com/interview/newsdetail/
-
--(void)getNewsDetails:(int)newdID
+-(void)getNewsDetails:(int)newsID
           WithSuccess:(NewsDetailsProxySuccessBlock)success
           withFailure:(NewsDetailsProxyFailureBlock)failure{
 
     self.successBlock = success;
     self.failureBlock = failure;
-
-    [super getRequestDataWithURL:[NSString stringWithFormat:@"%@/%d",kNEWS_DETAILS_API_URL,newdID]
+    
+    [super getRequestDataWithURL:[NSString stringWithFormat:@"%@/%d",kNEWS_DETAILS_API_URL,newsID]
                   andRequestName:kNEWS_DETAILS_API_NAME];
 }
 
@@ -41,7 +41,7 @@ static NSString *const kNEWS_DETAILS_API_NAME = @"NewsDetails";
     }
     if (![returnDictionary isKindOfClass:[NSNull class]])
     {
-        [self handleSuccessCountryDetailsAPIWithResponse:operation.responseString];
+        [self handleSuccessNewsDetailsAPIWithResponse:operation.responseString];
         
     }
 }
@@ -63,20 +63,47 @@ static NSString *const kNEWS_DETAILS_API_NAME = @"NewsDetails";
                              @"message":COMMUNICATION_WITH_SERVER_FAILED
                              };
     }
-    [self handleFailureCountryDetailsAPIWithResponse:returnDictionary];
+    [self handleFailureNewsDetailsAPIWithResponse:returnDictionary];
 }
 
 #pragma mark - Handler -
 
-- (void)handleSuccessCountryDetailsAPIWithResponse:(NSString *)responseString
+- (void)handleSuccessNewsDetailsAPIWithResponse:(NSString *)responseString
 {
+    NewsDetailModel *newsDetailModel = [[NewsDetailModel alloc] init];
+    
     NSDictionary *responseDict = [self JSONValueReturnsDictionary:responseString];
     
-    self.successBlock(responseDict);
+    NSDictionary *objectDictionary = responseDict[@"news_info"];
+    
+    if ([objectDictionary isKindOfClass:[NSDictionary class]])
+    {
+        newsDetailModel = [NewsDetailModel createNewsDetailModelFromDictionary:objectDictionary];        
+    }
+    
+    NSMutableArray *newsImagesArray = [[NSMutableArray alloc] init];
+    
+    for (NSInteger iterator = 0; iterator < [responseDict[@"images"] count]; iterator++)
+    {
+        NSDictionary *objectDictionary = responseDict[@"images"][iterator];
+        
+        if ([objectDictionary isKindOfClass:[NSDictionary class]])
+        {
+            NewsImageModel *newsImageModel = [NewsImageModel createNewsImageModelFromDictionary:objectDictionary];
+            [newsImagesArray addObject:newsImageModel];
+        }
+    }
+    
+    NSDictionary *modelDict = @{
+                                @"newsInfo": newsDetailModel,
+                                @"images": newsImagesArray,
+                                @"imageURL":responseDict[@"image_url"]
+                                };
+    self.successBlock(modelDict);
     
 }
 
-- (void)handleFailureCountryDetailsAPIWithResponse:(NSDictionary *)returnDictionary
+- (void)handleFailureNewsDetailsAPIWithResponse:(NSDictionary *)returnDictionary
 {
     self.failureBlock(returnDictionary);
 }

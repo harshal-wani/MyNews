@@ -17,7 +17,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.navigationBar.userInteractionEnabled = YES;
+    self.view.backgroundColor = [UIUtils colorFromHexColor:VIEW_BG_COLOR];
+
 }
 
 - (void)didReceiveMemoryWarning

@@ -1,14 +1,14 @@
 //
-//  NewsModel.m
+//  NewsDetailModel.m
 //  CricketNews
 //
-//  Created by Harshal Wani on 8/4/16.
+//  Created by Harshal Wani on 8/9/16.
 //  Copyright © 2016 Harshal Wani. All rights reserved.
 //
 
-#import "NewsModel.h"
+#import "NewsDetailModel.h"
 
-@implementation NewsModel
+@implementation NewsDetailModel
 
 #pragma mark - Initialisation
 
@@ -26,16 +26,18 @@
              @"id": @"newsID",
              @"headline": @"headline",
              @"timestamp": @"timestamp",
-             @"image": @"image",
-             @"location": @"location"
+             @"location": @"location",
+             @"story_type": @"storyType",
+             @"source": @"source",
+             @"summary": @"summary"
              };
 }
 
-+ (NewsModel *)createNewsModelFromDictionary:(NSDictionary *)dict
++ (NewsDetailModel *)createNewsDetailModelFromDictionary:(NSDictionary *)dict
 {
-    NewsModel *newsModel = [[NewsModel alloc] init];
+    NewsDetailModel *newsDetailModel = [[NewsDetailModel alloc] init];
     
-    NSDictionary *mapping = [NewsModel jsonMapping];
+    NSDictionary *mapping = [NewsDetailModel jsonMapping];
     
     for (NSString *atttribute in [dict allKeys])
     {
@@ -45,11 +47,11 @@
         
         if (attributeValue != nil && !([attributeValue isKindOfClass:[NSNull class]]) && classProperty != nil && !([classProperty isKindOfClass:[NSNull class]]))
         {
-            [newsModel setValue:attributeValue
-                    forKeyPath :classProperty];
+            [newsDetailModel setValue:attributeValue
+                          forKeyPath :classProperty];
         }
     }
-    return newsModel;
+    return newsDetailModel;
 }
 
 @end

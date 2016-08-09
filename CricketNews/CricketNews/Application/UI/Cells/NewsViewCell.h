@@ -17,7 +17,6 @@
 @property (nonatomic, strong) UIImageView *newsThumbnailImage;
 @property (nonatomic, strong) UILabel *lblNewsTitle;
 @property (nonatomic, strong) UILabel *lblPostDate;
-@property (nonatomic, strong) UILabel *lblNewsDescription;
 
 - (void)setUpUIwithModel:(NewsModel *)model;
 
